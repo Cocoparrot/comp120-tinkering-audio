@@ -9,6 +9,8 @@ public static class PublicAudioUtil
 
     //Unity has functions inside UnityEditor for playing audio (inside AudioUtil.cs) but it's not accessible normally.
     //This code uses reflection to find the methods we want (PlayClip and StopAllClips) and lets us call them via reflection.
+
+    //All of this code is taken from the unity forums from help threads.
     public static void PlayClip(AudioClip clip)
     {
         Assembly unityEditorAssembly = typeof(AudioImporter).Assembly;
@@ -47,4 +49,4 @@ public static class PublicAudioUtil
         );
     }
 
-} // class PublicAudioUtil
+} 
