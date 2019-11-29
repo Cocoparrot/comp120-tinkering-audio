@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1895845983571460372}
   - component: {fileID: 1895845983571460373}
   - component: {fileID: 1895845983571460375}
-  - component: {fileID: 1895845983571460369}
   m_Layer: 0
   m_Name: Collectable
   m_TagString: Untagged
@@ -106,11 +105,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectSound: {fileID: 8300000, guid: 229dbb9facce557418f42c95c05e5c28, type: 3}
---- !u!81 &1895845983571460369
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895845983571460376}
-  m_Enabled: 1
