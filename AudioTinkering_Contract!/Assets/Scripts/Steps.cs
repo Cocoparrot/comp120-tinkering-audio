@@ -7,8 +7,14 @@ public class Steps : MonoBehaviour
 
 
     public float stepCoolDown; //initialise the stepCooldown variable we will use to keep track of the actual steps made
-    public float stepRate = 0.5f; // 
+    public float stepRate = 0.5f; // The variable we want to use to define the length of each footstep
     public AudioSource stepSound; //Reference to the audiosource which we want to play.
+
+    //Declare the minimum and maximum range of the randomizer for the pitch and volume.
+    public float pitchRangeMin = 0.6f;
+    public float pitchRangeMax = 1.1f;
+    public float volumeRangeMin = 0.6f;
+    public float volumeRangeMax = 1.1f;
 
     // Start is called before the first frame update
    
@@ -27,10 +33,10 @@ public class Steps : MonoBehaviour
 
         if ((Input.GetAxis("Horizontal") != 0f || Input.GetAxis("Vertical") != 0f) && stepCoolDown < 0f)
         {
-            stepSound.pitch = Random.Range(0.6f, 1f);
-            stepSound.volume = Random.Range(0.6f, 1.1f);
+            stepSound.pitch = Random.Range(pitchRangeMin, pitchRangeMax);
+            stepSound.volume = Random.Range(volumeRangeMin, volumeRangeMax);
             stepSound.Play();
-            stepCoolDown = stepRate; //reset the timer everytime a new step is made
+            stepCoolDown = stepRate; //reset the timer everytime a new step is made, so we actually have different steps.
         }
     }
 }
